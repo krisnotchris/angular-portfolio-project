@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211203252) do
+ActiveRecord::Schema.define(version: 20161211221425) do
+
+  create_table "kids", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "dob"
+    t.string   "mom_name"
+    t.string   "dad_name"
+    t.string   "birthplace"
+    t.string   "length"
+    t.string   "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "milestones", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "kid_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

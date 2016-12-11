@@ -3,7 +3,7 @@ angular
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: 'views/home.html',
       controller: 'HomeCtrl'
     })
@@ -32,5 +32,10 @@ angular
      templateUrl: 'views/user.html',
      controller: 'UserCtrl'
    })
-   $urlRouterProvider.otherwise('/home')
+   .state('kids',{
+     url: '/kids',
+     templateUrl: 'views/kids.html',
+     controller: 'KidCtrl'
+   })
+   $urlRouterProvider.otherwise('/')
  })

@@ -1,5 +1,5 @@
 angular
   .module('myApp')
-  .controller('HomeCtrl', function($scope, $http){
+  .controller('UserCtrl', function($scope, $http){
 
   })
