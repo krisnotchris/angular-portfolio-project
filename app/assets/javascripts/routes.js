@@ -27,5 +27,10 @@ angular
        })
      }
    })
+   .state('users',{
+     url: '/users',
+     templateUrl: 'views/user.html',
+     controller: 'UserCtrl'
+   })
    $urlRouterProvider.otherwise('/home')
  })
