@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   respond_to :json
 
   def index
-    render ‘application/index’
+    render 'application/index'
   end
 
   protected
