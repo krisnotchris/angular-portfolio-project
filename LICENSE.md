@@ -1,28 +1,3 @@
-# Angular + Rails Portfolio Project
-## Sprout
-
-This application let's you create an online baby book. You can store all of your kids in the database, and track their milestones.
-
-## Installation
-
-1. Fork and clone the repo
-2. Run `rake db:create`
-3. Run migrations: `rake db:migrate`
-4. Start rails server: `rails s`
-5. Navigate in your browser to `http://localhost:3000`
-
-## Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/krisnotchris/angular-portfolio-project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
-
-## Built With
-
-[AngularJS](https://angularjs.org/) - Front end
-
-[Ruby on Rails](http://rubyonrails.org/) - Back end
-
-
-## License
-
 Copyright (c) 2016 Kris Henderson
 
 Permission is hereby granted, free of charge, to any person obtaining
