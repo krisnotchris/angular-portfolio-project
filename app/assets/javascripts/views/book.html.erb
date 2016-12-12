@@ -1,5 +1,13 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Book page</h1>
-  <h3>{{ myWelcome }}</h3>
+  <ul>
+    <li>{{ kid.name }}</li>
+    <li>{{ kid.dob }}</li>
+    <ul ng-repeat="events in kid.milestones">
+        <li>Name: {{ events.name }}</li>
+        <li>Description: {{ events.description}}</li>
+    </ul>
+
+  </ul>
 
 </div>

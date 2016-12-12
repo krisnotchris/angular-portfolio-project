@@ -1,3 +1,3 @@
 class KidSerializer < ActiveModel::Serializer
-  attributes :id, :name, :dob
+  attributes :id, :name, :dob, :milestones
 end

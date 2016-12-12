@@ -4,6 +4,6 @@ angular
     var kidsId = $stateParams;
     $http.get('/kids/' + kidsId.id)
     .then(function(response){
-      $scope.myWelcome = response.data;
+      $scope.kid = response.data;
     })
   })
