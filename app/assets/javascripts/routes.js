@@ -38,7 +38,7 @@ angular
      controller: 'KidCtrl'
    })
    .state('book',{
-     url: '/book/:id',
+     url: '/kids/:id',
      templateUrl: 'views/book.html',
      controller: 'BookCtrl'
    })

@@ -1,5 +1,11 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Kids</h1>
   <hr />
-  <a ui-sref="book/{{ kids.id}}"><h3 ng-repeat="kids in myWelcome">{{ kids.name }}</h3></a>
+  <!-- <h3 ng-repeat="kids in myWelcome">{{ kids.name }} -->
+  <ul>
+    <li ng-repeat="kids in myWelcome">
+    <a ui-sref="book({ id: kids.id })">{{ kids.name }}</a>
+    <a ui-sref="contacts.detail({ id: contact.id })">{{ contact.name }}</a>
+    </li>
+  </ul>
 </div>
