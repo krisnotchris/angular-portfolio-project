@@ -10,9 +10,18 @@ class KidsController < ApplicationController
     render json: kid
   end
 
-  def new 
+  def new
   end
 
   def create
+    name = params[:name]
+    dob = params[:dob]
+    mom_name = params[:mom_name]
+    dad_name = params[:dad_name]
+    birthplace = params[:birthplace]
+    length = params[:length]
+    weight = params[:weight]
+    kid = Kid.create(name: name, dob: dob, mom_name: mom_name, dad_name: dad_name, birthplace: birthplace, length: length, weight: weight)
+    render json: kid
   end
 end
