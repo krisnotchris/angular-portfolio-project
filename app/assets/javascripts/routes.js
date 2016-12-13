@@ -37,10 +37,16 @@ angular
      templateUrl: 'views/kids.html',
      controller: 'KidCtrl'
    })
+   .state('newKid',{
+     url: '/kids/new',
+     templateUrl: 'views/newkid.html',
+     controller: 'NewCtrl'
+   })
    .state('book',{
      url: '/kids/:id',
      templateUrl: 'views/book.html',
      controller: 'BookCtrl'
    })
+
    $urlRouterProvider.otherwise('/')
  })

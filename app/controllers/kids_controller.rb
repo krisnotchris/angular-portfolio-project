@@ -9,4 +9,10 @@ class KidsController < ApplicationController
     kid = Kid.find(params[:id])
     render json: kid
   end
+
+  def new 
+  end
+
+  def create
+  end
 end
