@@ -1,11 +1,14 @@
 <div class="col-lg-8 col-lg-offset-2">
+  <h1>Welcome back {{ user.username }}</h1>
+  <hr />
   <h1>Kids</h1>
   <hr />
-  
+
   <ul>
     <li ng-repeat="kid in kids">
     <a ui-sref="book({ id: kid.id })">{{ kid.name }}</a>
     <a ui-sref="contacts.detail({ id: contact.id })">{{ contact.name }}</a>
     </li>
   </ul>
+  <button class='button-success'>Add a new kid</button>
 </div>

@@ -1,6 +1,7 @@
+require 'pry'
 class KidsController < ApplicationController
   def index
-    kids = Kid.all
+    kids = Kid.where(user_id: current_user.id)
     render json: kids
   end
 
