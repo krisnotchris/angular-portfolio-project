@@ -27,6 +27,7 @@ angular
        })
      }
    })
+
    .state('users',{
      url: '/users',
      templateUrl: 'views/user.html',
@@ -46,6 +47,11 @@ angular
      url: '/kids/:id',
      templateUrl: 'views/book.html',
      controller: 'BookCtrl'
+   })
+   .state('book.newMilestone',{
+     url: '/milestones/new',
+     templateUrl: 'views/newmilestone.html',
+     controller: 'MilestoneCtrl'
    })
 
    $urlRouterProvider.otherwise('/')

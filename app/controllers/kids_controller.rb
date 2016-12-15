@@ -19,10 +19,5 @@ class KidsController < ApplicationController
     render json: kid
   end
 
-  # private
-  #
-  # def kids_params
-  #   params.require(:kid).permit(:name, :dob, :mom_name, :dad_name, :birthplace, :length, :weight, :user_id => current_user.id)
-  # end
 
 end

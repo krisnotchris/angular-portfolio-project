@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'application#index'
   resources :users, only: [:show]
   resources :kids
+  resources :milestones
 end
