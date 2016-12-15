@@ -14,14 +14,15 @@ class KidsController < ApplicationController
   end
 
   def create
-    name = params[:name]
-    dob = params[:dob]
-    mom_name = params[:mom_name]
-    dad_name = params[:dad_name]
-    birthplace = params[:birthplace]
-    length = params[:length]
-    weight = params[:weight]
-    kid = Kid.create(name: name, dob: dob, mom_name: mom_name, dad_name: dad_name, birthplace: birthplace, length: length, weight: weight)
+    user = current_user.id
+    kid = Kid.create(name: params[:data][:name], dob: params[:data][:dob], mom_name: params[:data][:mom_name], dad_name: params[:data][:dad_name], birthplace: params[:data][:birthplace], length: params[:data][:length], weight: params[:data][:weight], user_id: user)
     render json: kid
   end
+
+  # private
+  #
+  # def kids_params
+  #   params.require(:kid).permit(:name, :dob, :mom_name, :dad_name, :birthplace, :length, :weight, :user_id => current_user.id)
+  # end
+
 end
