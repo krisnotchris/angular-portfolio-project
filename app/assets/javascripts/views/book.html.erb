@@ -1,3 +1,4 @@
+
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Book page</h1>
   <ul>
@@ -9,7 +10,9 @@
         <li>Name: {{ events.name }}</li>
         <li>Description: {{ events.description}}</li>
     </ul>
+
     <a ui-sref="book.newMilestone">Add new milestone</a>
   </ul>
+  <ui-view></ui-view>
 
 </div>
