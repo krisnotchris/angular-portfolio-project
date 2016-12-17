@@ -10,8 +10,10 @@
     <li>Length: {{ kid.length }}</li>
     <li>Weight: {{ kid.weight }}</li>
     <hr />
+    Search: <input ng-model="search">
     <h1>MileStones</h1>
-    <ul ng-repeat="events in kid.milestones">
+
+    <ul ng-repeat="events in kid.milestones | filter: search">
         <li>Name: {{ events.name }}</li>
         <li>Description: {{ events.description}}</li>
     </ul>
