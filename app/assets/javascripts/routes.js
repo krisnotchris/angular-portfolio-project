@@ -27,12 +27,6 @@ angular
        })
      }
    })
-
-   .state('users',{
-     url: '/users',
-     templateUrl: 'views/user.html',
-     controller: 'UserCtrl'
-   })
    .state('kids',{
      url: '/kids',
      templateUrl: 'views/kids.html',

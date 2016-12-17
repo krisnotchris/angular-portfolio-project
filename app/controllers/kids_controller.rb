@@ -1,5 +1,7 @@
-require 'pry'
+
 class KidsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     kids = Kid.where(user_id: current_user.id)
     render json: kids
