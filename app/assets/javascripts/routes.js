@@ -48,6 +48,11 @@ angular
      templateUrl: 'views/book.html',
      controller: 'BookCtrl'
    })
+   .state('book.edit',{
+     url: '/edit',
+     templateUrl: 'views/editbook.html',
+     controller: 'BookCtrl'
+   })
    .state('book.newMilestone',{
      url: '/milestones/new',
      templateUrl: 'views/newmilestone.html',

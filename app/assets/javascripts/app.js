@@ -1,4 +1,4 @@
 (function(){
   angular
-    .module('myApp', ['ui.router', 'Devise', 'templates'])
+    .module('myApp', ['ui.router', 'Devise', 'templates', 'ngMessages'])
 }())
