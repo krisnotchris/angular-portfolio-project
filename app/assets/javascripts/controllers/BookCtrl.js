@@ -5,7 +5,15 @@ angular
     var kidsId = $stateParams;
     $http.get('/kids/' + kidsId.id)
     .then(function(response){
-    
+
       $scope.kid = response.data;
     })
+
+    $scope.edit = function(){
+      console.log('hello');
+    }
+
+    $scope.deleteKid = function(){
+
+    }
   })
