@@ -4,36 +4,51 @@
 
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Name" ng-model="kid.name" name="name" required="required" >
-        <div ng-messages="form.name.$error">
+        <div ng-messages="form.name.$error" ng-if="form.name.$touched">
           <div ng-message="required">Name is required!</div>
         </div>
       </div>
 
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Date of Birth" ng-model="kid.dob" name="dob" required='required' >
-        <div ng-messages="form.dob.$error">
+        <div ng-messages="form.dob.$error" ng-if="form.dob.$touched">
           <div ng-message="required">Date of Birth is required!</div>
         </div>
       </div>
 
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Mommy's Name" ng-model="kid.mom_name">
+        <input type="text" class="form-control" placeholder="Mommy's Name" ng-model="kid.mom_name" name="momName" required="required">
+        <div ng-messages="form.momName.$error" ng-if="form.momName.$touched">
+          <div ng-message="required">Mom's name is required!</div>
+        </div>
       </div>
 
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Daddy's Name" ng-model="kid.dad_name">
-      </div>
-      
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Birth Place" ng-model="kid.birthplace">
-      </div>
-
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Length" ng-model="kid.length">
+        <input type="text" class="form-control" placeholder="Daddy's Name" ng-model="kid.dad_name" name="dadName" required="required">
+        <div ng-messages="form.dadName.$error" ng-if="form.dadName.$touched">
+          <div ng-message="required">Dad's name is required!</div>
+        </div>
       </div>
 
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Weight" ng-model="kid.weight">
+        <input type="text" class="form-control" placeholder="Birth Place" ng-model="kid.birthplace" name="birthplace" required="required">
+        <div ng-messages="form.birthplace.$error" ng-if="form.birthplace.$touched">
+          <div ng-message="required">Birthplace is required!</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Length" ng-model="kid.length" name="length" required="required">
+        <div ng-messages="form.length.$error" ng-if="form.length.$touched">
+          <div ng-message="required">Length is required!</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Weight" ng-model="kid.weight" name="weight" required="required">
+        <div ng-messages="form.weight.$error" ng-if="form.weight.$touched">
+          <div ng-message="required">Weight is required!</div>
+        </div>
       </div>
 
       <input type="submit" class="btn btn-info" value="Create">
