@@ -1,28 +1,41 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1>new kid page</h1>
     <form ng-submit="create()" name="form">
+
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Name" ng-model="kid.name" name="name" require="required" >
-        <!-- <div ng-messages="form"></div> -->
+        <input type="text" class="form-control" placeholder="Name" ng-model="kid.name" name="name" required="required" >
+        <div ng-messages="form.name.$error">
+          <div ng-message="required">Name is required!</div>
+        </div>
       </div>
+
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Date of Birth" ng-model="kid.dob" >
+        <input type="text" class="form-control" placeholder="Date of Birth" ng-model="kid.dob" name="dob" required='required' >
+        <div ng-messages="form.dob.$error">
+          <div ng-message="required">Date of Birth is required!</div>
+        </div>
       </div>
+
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Mommy's Name" ng-model="kid.mom_name">
       </div>
+
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Daddy's Name" ng-model="kid.dad_name">
       </div>
+      
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Birth Place" ng-model="kid.birthplace">
       </div>
+
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Length" ng-model="kid.length">
       </div>
+
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Weight" ng-model="kid.weight">
       </div>
+
       <input type="submit" class="btn btn-info" value="Create">
     </form>
 </div>
