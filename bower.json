@@ -12,7 +12,8 @@
       "angular": "v1.5.8",
       "angular-ui-router": "latest",
       "angular-devise": "latest",
-      "angular-messages": "latest"
+      "angular-messages": "latest",
+      "angular-resource": "latest"
     }
   }
 }
