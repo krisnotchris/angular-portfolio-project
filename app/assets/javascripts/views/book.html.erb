@@ -2,17 +2,35 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Book page</h1>
   <ul>
-    <li>Name: <span>{{ kid.name }}</span></li>
-    <li>Date of Birth: {{ kid.dob }}</li>
-    <li>Mom's Name: {{ kid.mom_name }}</li>
-    <li>Dad's Name: {{ kid.dad_name }}</li>
-    <li>Birthplace: {{ kid.birthplace }}</li>
-    <li>Length: {{ kid.length }}</li>
-    <li>Weight: {{ kid.weight }}</li>
-    <button ng-click="editMode = true;">Edit</button>
+    <li>Name: <span ng-show="!editMode">{{ kid.name }}</span>
+      <input type="text" ng-model="kid.name" ng-show="editMode">
+    </li>
+    <li>Date of Birth: <span ng-show="!editMode">{{ kid.dob }}</span>
+      <input type="text" ng-model="kid.dob" ng-show="editMode">
+    </li>
+    <li>Mom's Name: <span ng-show="!editMode">{{ kid.mom_name }}</span>
+      <input type="text" ng-model="kid.mom_name" ng-show="editMode">
+    </li>
+    <li>Dad's Name: <span ng-show="!editMode">{{ kid.dad_name }}</span>
+      <input type="text" ng-model="kid.dad_name" ng-show="editMode">
+    </li>
+    <li>Birthplace: <span ng-show="!editMode">{{ kid.birthplace }}</span>
+      <input type="text" ng-model="kid.birthplace" ng-show="editMode">
+    </li>
+    <li>Length: <span ng-show="!editMode">{{ kid.length }}</span>
+      <input type="text" ng-model="kid.length" ng-show="editMode">
+    </li>
+    <li>Weight: <span ng-show="!editMode">{{ kid.weight }}</span>
+      <input type="text" ng-model="kid.weight" ng-show="editMode">
+    </li>
+    <button ng-click="editMode = true">Edit</button>
+    <button ng-click="updateKid(kid); editMode = false" ng-show="editMode">Update</button>
 
-    <input type="text" ng-model="kid.name" ng-show="editMode">
-    <button ng-click="updateKid(kid)" ng-show="editMode">update</button>
+
+
+
+
+
 
     <hr />
     Search: <input ng-model="search">
