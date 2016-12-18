@@ -20,6 +20,7 @@ class KidsController < ApplicationController
 
   def update
     kid = Kid.find(params[:id])
+    kid.update(name: params[:name])
     render json: kid
   end
 

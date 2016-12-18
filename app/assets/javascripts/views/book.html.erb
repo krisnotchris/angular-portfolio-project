@@ -2,16 +2,17 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Book page</h1>
   <ul>
-    <li>Name: {{ kid.name }}</li>
+    <li>Name: <span>{{ kid.name }}</span></li>
     <li>Date of Birth: {{ kid.dob }}</li>
     <li>Mom's Name: {{ kid.mom_name }}</li>
     <li>Dad's Name: {{ kid.dad_name }}</li>
     <li>Birthplace: {{ kid.birthplace }}</li>
     <li>Length: {{ kid.length }}</li>
     <li>Weight: {{ kid.weight }}</li>
-    <button ng-click="updateKid(kid)">Edit</button>
+    <button ng-click="editMode = true;">Edit</button>
 
-      <input ng-show='editMode' type="text" ng-model="kid.name">
+    <input type="text" ng-model="kid.name" ng-show="editMode">
+    <button ng-click="updateKid(kid)" ng-show="editMode">update</button>
 
     <hr />
     Search: <input ng-model="search">
