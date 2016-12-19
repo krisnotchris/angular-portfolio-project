@@ -13,4 +13,10 @@ angular
 
       })
     }
+    $scope.updateEvent = function(events) {
+      $http.put('/milestones/' + events.id, events)
+        .then(function(response){
+          
+        })
+    }
   })

@@ -5,4 +5,10 @@ class MilestonesController < ApplicationController
     render json: milestone
   end
 
+  def update
+    milestone = Milestone.find(params[:id])
+    milestone.update(name: params[:name], description: params[:description])
+    render json: milestone
+  end
+
 end
