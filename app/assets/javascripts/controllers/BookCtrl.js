@@ -13,12 +13,4 @@ angular
 
       })
     }
-
-    $scope.inEditMode = function(){
-      return editMode = true;
-    }
-
-    $scope.notEditMode = function(){
-      return editMode = false;
-    }
   })

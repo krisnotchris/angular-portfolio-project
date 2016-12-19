@@ -42,11 +42,7 @@ angular
      templateUrl: 'views/book.html',
      controller: 'BookCtrl'
    })
-   .state('editBook',{
-     url: '/kids/:id',
-     controller: 'BookCtrl',
-     templateUrl: 'views/editbook.html'
-   })
+
    .state('book.newMilestone',{
      url: '/milestones/new',
      templateUrl: 'views/newmilestone.html',
