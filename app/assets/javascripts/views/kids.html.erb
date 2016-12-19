@@ -1,10 +1,11 @@
 <div class="container">
   <h1>Hey! {{ user.username }}</h1>
   <hr />
-  <p>These are your kids. Click on a name to view their book.</p>
+  <h4>These are your kids. Click on a name to view their book.</h4><br>
   <h4 ng-repeat="kid in kids">
-  - <a ui-sref="book({ id: kid.id })">{{ kid.name }}</a>
+  <i class="fa fa-arrow-right" aria-hidden="true"></i> <a ui-sref="book({ id: kid.id })">{{ kid.name }}</a>
 </h4>
-<p>New kid in the family?</p>
-  <a ui-sref="newKid">Create New Kid Book</a>
+<hr />
+<h4>New kid in the family?</h4>
+<button type="button" class="btn btn-default" ui-sref="newKid">New Kid Book</button>
 </div>

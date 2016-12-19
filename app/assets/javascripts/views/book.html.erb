@@ -1,48 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class='col-md-6'>
+      <h1>Birth Info</h1>
+    </div>
+    <div class="col-md-6">
+      <h1>Milestones</h1>
+    </div>
 
-<div class="col-lg-8 col-lg-offset-2">
-  <h1>Book page</h1>
-  <ul>
-    <li>Name: <span ng-show="!editMode">{{ kid.name }}</span>
-      <input type="text" ng-model="kid.name" ng-show="editMode">
-    </li>
-    <li>Date of Birth: <span ng-show="!editMode">{{ kid.dob }}</span>
-      <input type="text" ng-model="kid.dob" ng-show="editMode">
-    </li>
-    <li>Mom's Name: <span ng-show="!editMode">{{ kid.mom_name }}</span>
-      <input type="text" ng-model="kid.mom_name" ng-show="editMode">
-    </li>
-    <li>Dad's Name: <span ng-show="!editMode">{{ kid.dad_name }}</span>
-      <input type="text" ng-model="kid.dad_name" ng-show="editMode">
-    </li>
-    <li>Birthplace: <span ng-show="!editMode">{{ kid.birthplace }}</span>
-      <input type="text" ng-model="kid.birthplace" ng-show="editMode">
-    </li>
-    <li>Length: <span ng-show="!editMode">{{ kid.length }}</span>
-      <input type="text" ng-model="kid.length" ng-show="editMode">
-    </li>
-    <li>Weight: <span ng-show="!editMode">{{ kid.weight }}</span>
-      <input type="text" ng-model="kid.weight" ng-show="editMode">
-    </li>
-    <button ng-click="editMode = true">Edit</button>
-    <button ng-click="updateKid(kid); editMode = false" ng-show="editMode">Update</button>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>
+        <span class="label label-default">Name</span>
+        <span ng-show="!editMode">{{ kid.name }}</span>
+        <input type="text" ng-model="kid.name" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Date of Birth</span>
+        <span ng-show="!editMode">{{ kid.dob }}</span>
+        <input type="text" ng-model="kid.dob" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Mom's Name</span>
+        <span ng-show="!editMode">{{ kid.mom_name }}</span>
+        <input type="text" ng-model="kid.mom_name" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Dad's Name</span>
+        <span ng-show="!editMode">{{ kid.dad_name }}</span>
+        <input type="text" ng-model="kid.dad_name" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Birthplace</span>
+        <span ng-show="!editMode">{{ kid.birthplace }}</span>
+        <input type="text" ng-model="kid.birthplace" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Length</span>
+        <span ng-show="!editMode">{{ kid.length }}</span>
+        <input type="text" ng-model="kid.length" ng-show="editMode">
+      </h4>
+      <h4>
+        <span class="label label-default">Weight</span>
+        <span ng-show="!editMode">{{ kid.weight }}</span>
+        <input type="text" ng-model="kid.weight" ng-show="editMode">
+      </h4>
+
+        <button ng-click="editMode = true" class='btn btn-primary'>Edit</button>
+        <button ng-click="updateKid(kid); editMode = false" ng-show="editMode" class="btn btn-success">Update</button>
+    </div><br>
+   <div class="col-md-6">
+      <input ng-model="search" placeholder="search for milestone" class="form-control"><br>
+
+     <div ng-repeat="events in kid.milestones | filter: search" class='well'>
+           <h4>{{ events.name }}</h4>
+           <p>{{ events.description}}</p>
+     </div>
+     <button ui-sref="book.newMilestone" class="btn btn-primary">New Milestone</button>
+     <hr />
+     <ui-view></ui-view>
+   </div>
 
 
 
-
-
-
-
-    <hr />
-    Search: <input ng-model="search">
-    <h1>MileStones</h1>
-
-    <ul ng-repeat="events in kid.milestones | filter: search">
-        <li>Name: {{ events.name }}</li>
-        <li>Description: {{ events.description}}</li>
-    </ul>
-
-    <a ui-sref="book.newMilestone">Add new milestone</a>
-  </ul>
-  <ui-view></ui-view>
-
+  </div>
 </div>
