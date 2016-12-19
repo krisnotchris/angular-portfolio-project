@@ -11,4 +11,9 @@ class MilestonesController < ApplicationController
     render json: milestone
   end
 
+  def destroy
+    milestone = Milestone.find(params[:id])
+    milestone.destroy
+  end
+
 end

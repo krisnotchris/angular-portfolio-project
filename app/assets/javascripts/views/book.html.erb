@@ -62,7 +62,7 @@
              <input type="text" ng-model="events.description" ng-show="editMode">
            </p>
            <button  ng-click="editMode = true"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></button>
-           <button ng-show="!editMode"><i class="fa fa-ban" aria-hidden="true"> Delete</i></button>
+           <button ng-show="!editMode" ng-click="deleteEvent(events)"><i class="fa fa-ban" aria-hidden="true"> Delete</i></button>
            <button ng-show="editMode" ng-click="updateEvent(events); editMode = false"><i class="fa fa-check" aria-hidden="true"> Update</i></button>
      </div>
      <button ui-sref="book.newMilestone" class="btn btn-primary">New Milestone</button>

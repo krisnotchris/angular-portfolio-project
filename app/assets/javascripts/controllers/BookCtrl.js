@@ -1,6 +1,6 @@
 angular
   .module('myApp')
-  .controller('BookCtrl', function($scope, $http, $stateParams){
+  .controller('BookCtrl', function($scope, $http, $stateParams, $state){
     var kidsId = $stateParams;
     $http.get('/kids/' + kidsId.id)
       .then(function(response){
@@ -16,7 +16,19 @@ angular
     $scope.updateEvent = function(events) {
       $http.put('/milestones/' + events.id, events)
         .then(function(response){
-          
+
         })
     }
+
+    $scope.deleteEvent = function(events) {
+      var result = confirm('Are you sure you want to delete this milestone?');
+      if (result) {
+        $http.delete('milestones/' + events.id, events)
+        .then(function(response){
+          var index = $scope.kid.milestones.indexOf(events);
+          console.log(index);
+          $scope.kid.milestones.splice(index, 1)
+            })}
+    }
+
   })

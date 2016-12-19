@@ -20,7 +20,7 @@ class KidsController < ApplicationController
 
   def update
     kid = Kid.find(params[:id])
-    kid.update(name: params[:name])
+    kid.update(name: params[:name], dob: params[:dob], mom_name: params[:mom_name], dad_name: params[:dad_name], birthplace: params[:birthplace], length: params[:length], weight: params[:weight])
     render json: kid
   end
 
