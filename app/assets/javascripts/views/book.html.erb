@@ -55,6 +55,8 @@
      <div ng-repeat="events in kid.milestones | filter: search" class='well'>
            <h4>{{ events.name }}</h4>
            <p>{{ events.description}}</p>
+           <button><i class="fa fa-pencil" aria-hidden="true" ng-click="editMode = true"> Edit</i></button>
+           <button><i class="fa fa-ban" aria-hidden="true" ng-click='deleteMode = true'> Delete</i></button>
      </div>
      <button ui-sref="book.newMilestone" class="btn btn-primary">New Milestone</button>
      <hr />
