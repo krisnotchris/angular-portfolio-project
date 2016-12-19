@@ -1,15 +1,10 @@
-<div class="col-lg-8 col-lg-offset-2">
-  <h1>Welcome back {{ user.username }}</h1>
+<div class="container">
+  <h1>Hey! {{ user.username }}</h1>
   <hr />
-  <h1>Kids</h1>
-  <hr />
-
-  <ul>
-    <li ng-repeat="kid in kids">
-    <a ui-sref="book({ id: kid.id })">{{ kid.name }}</a>
-    
-    </li>
-  </ul>
-
-  <a ui-sref="newKid">Add new kid</a>
+  <p>These are your kids. Click on a name to view their book.</p>
+  <h4 ng-repeat="kid in kids">
+  - <a ui-sref="book({ id: kid.id })">{{ kid.name }}</a>
+</h4>
+<p>New kid in the family?</p>
+  <a ui-sref="newKid">Create New Kid Book</a>
 </div>
