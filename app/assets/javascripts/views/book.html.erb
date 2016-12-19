@@ -12,42 +12,42 @@
     <div class="col-md-6">
       <h4>
         <span class="">Name</span>:
-        <span ng-show="!editMode"><small>{{ kid.name }}</small></span>
-        <input type="text" ng-model="kid.name" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.name }}</small></span>
+        <input type="text" ng-model="kid.name" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Date of Birth</span>:
-        <span ng-show="!editMode"><small>{{ kid.dob }}</small></span>
-        <input type="text" ng-model="kid.dob" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.dob }}</small></span>
+        <input type="text" ng-model="kid.dob" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Mom's Name</span>:
-        <span ng-show="!editMode"><small>{{ kid.mom_name }}</small></span>
-        <input type="text" ng-model="kid.mom_name" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.mom_name }}</small></span>
+        <input type="text" ng-model="kid.mom_name" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Dad's Name</span>:
-        <span ng-show="!editMode"><small>{{ kid.dad_name }}</small></span>
-        <input type="text" ng-model="kid.dad_name" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.dad_name }}</small></span>
+        <input type="text" ng-model="kid.dad_name" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Birthplace</span>:
-        <span ng-show="!editMode"><small>{{ kid.birthplace }}</small></span>
-        <input type="text" ng-model="kid.birthplace" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.birthplace }}</small></span>
+        <input type="text" ng-model="kid.birthplace" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Length</span>:
-        <span ng-show="!editMode"><small>{{ kid.length }}</small></span>
-        <input type="text" ng-model="kid.length" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.length }}</small></span>
+        <input type="text" ng-model="kid.length" ng-show="editModer">
       </h4>
       <h4>
         <span class="">Weight</span>:
-        <span ng-show="!editMode"><small>{{ kid.weight }}</small></span>
-        <input type="text" ng-model="kid.weight" ng-show="editMode">
+        <span ng-show="!editModer"><small>{{ kid.weight }}</small></span>
+        <input type="text" ng-model="kid.weight" ng-show="editModer">
       </h4>
 
-        <button ng-click="editMode = true" class='btn btn-primary'>Edit</button>
-        <button ng-click="updateKid(kid); editMode = false" ng-show="editMode" class="btn btn-success">Update</button>
+        <button ng-click="editModer = true" class='btn btn-primary'>Edit</button>
+        <button ng-click="updateKid(kid); editModer = false" ng-show="editModer" class="btn btn-success">Update</button>
     </div><br>
    <div class="col-md-6">
       <input ng-model="search" placeholder="search for milestone" class="form-control"><br>
