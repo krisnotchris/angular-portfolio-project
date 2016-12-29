@@ -15,5 +15,12 @@ class MilestonesController < ApplicationController
     milestone = Milestone.find(params[:id])
     milestone.destroy
   end
+  #
+  def upvote
+
+    milestone = Milestone.find(params[:id])
+    milestone.increment!(:upvotes)
+    render json: milestone
+  end
 
 end

@@ -64,6 +64,8 @@
            <button  ng-click="editMode = true"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></button>
            <button ng-show="!editMode" ng-click="deleteEvent(events)"><i class="fa fa-ban" aria-hidden="true"> Delete</i></button>
            <button ng-show="editMode" ng-click="updateEvent(events); editMode = false"><i class="fa fa-check" aria-hidden="true"> Update</i></button>
+           <button ng-click="increaseCount(events)">Up Vote{{ events.upvotes }}</button><p>
+             
      </div>
      <button ui-sref="book.newMilestone" class="btn btn-primary">New Milestone</button>
      <hr />
