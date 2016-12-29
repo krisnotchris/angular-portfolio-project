@@ -9,6 +9,7 @@
 
   </div>
   <div class="row">
+    <!-- birth info -->
     <div class="col-md-6">
       <h4>
         <span class="">Name</span>:
@@ -48,7 +49,25 @@
 
         <button ng-click="editModer = true" class='btn btn-primary'>Edit</button>
         <button ng-click="updateKid(kid); editModer = false" ng-show="editModer" class="btn btn-success">Update</button>
+            <!-- end of birth info -->
+
+            <!-- notes -->
+        <hr />
+        <h6>Notes</h6>
+        <form>
+          <textarea ng-model="note"></textarea>
+          <button ng-click="addNote()">Create Note</button>
+        </form>
+        <ol>
+          <li ng-repeat='note in notes'> {{ note }} <a href='' ng-click="deleteNote($index)">x</a></li>
+        </ol>
+        <hr>
+        <!-- end of notes -->
     </div><br>
+
+
+
+    <!-- milestone -->
    <div class="col-md-6">
       <input ng-model="search" placeholder="search for milestone" class="form-control"><br>
 
@@ -68,7 +87,11 @@
      </div>
      <button ui-sref="book.newMilestone" class="btn btn-primary">New Milestone</button>
      <hr />
+     <!-- end of milestones -->
+
+     <!-- new milestone form -->
      <ui-view></ui-view>
+     <!-- end of milestone form -->
    </div>
 
 

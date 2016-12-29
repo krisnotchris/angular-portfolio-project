@@ -45,5 +45,15 @@ angular
       }
 
     }
+    $scope.notes = []
+    $scope.addNote = function(){
+      if($scope.note !=''){
+        $scope.notes.push($scope.note);
+        $scope.note = '';
+      }
+    }
+    $scope.deleteNote = function($index){
+      $scope.notes.splice($index, 1)
+    }
 
   })
