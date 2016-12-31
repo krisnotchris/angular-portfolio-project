@@ -19,13 +19,13 @@ angular
         })
     }
 
-    $scope.deleteEvent = function(events) {
+    $scope.deleteEvent = function(event) { // the event is being passed in from the view when the button is clicked
       var result = confirm('Are you sure you want to delete this milestone?');
       if (result) {
-        $http.delete('milestones/' + events.id, events)
+        $http.delete('milestones/' + event.id, event)
         .then(function(response){
-          var index = $scope.kid.milestones.indexOf(events);
-          $scope.kid.milestones.splice(index, 1)
+          var index = $scope.kid.milestones.indexOf(event); // this is searching $scope.kid.milestones array for the location of the event object and assigning it to var index
+          $scope.kid.milestones.splice(index, 1) // removes 1 item from the array at the index location
             })}
     }
 
